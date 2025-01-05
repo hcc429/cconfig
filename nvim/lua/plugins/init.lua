@@ -35,6 +35,14 @@ return {
       },
     },
   },
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = function(_, conf)
+      conf.filters.git_ignored = true
+      conf.filters.dotfiles = true
+      return conf
+    end
+  }
   -- {
   --   "nvim-telescope/telescope.nvim",
   --   opts = function(_, conf)
