@@ -22,10 +22,10 @@ map("n", '<CR>', 'm`o<Esc>``', {desc = "add blank line below"})
 
 
 -- move line(s) up and down
-map("v", "<C-j>", ":m '>+1<CR>gv=gv", { silent = true, desc = "move selected text down" })
-map("v", "<C-k>", ":m '<-2<CR>gv=gv", { silent = true, desc = "move selected text up" })
-map("n", "<C-j>", "<Esc>:m .+1<CR>==", { silent = true, desc = "Move current line down" })
-map("n", "<C-k>", "<Esc>:m .-2<CR>==", { silent = true, desc = "Move current line up" })
+map("v", "<M-j>", ":m '>+1<CR>gv=gv", { silent = true, desc = "move selected text down" })
+map("v", "<M-k>", ":m '<-2<CR>gv=gv", { silent = true, desc = "move selected text up" })
+map("n", "<M-j>", "<Esc>:m .+1<CR>==", { silent = true, desc = "Move current line down" })
+map("n", "<M-k>", "<Esc>:m .-2<CR>==", { silent = true, desc = "Move current line up" })
 
 -- scroll and center
 map("n", "<C-d>", "<C-d>zz", { desc = "scroll down and center" })
