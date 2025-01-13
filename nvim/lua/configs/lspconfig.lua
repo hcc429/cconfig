@@ -4,9 +4,10 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls", "gopls", "pyright", "ruff"}
+local servers = { "html", "cssls", "gopls", "pyright", "ruff", "clangd"}
 local nvlsp = require "nvchad.configs.lspconfig"
 
+nvlsp.capabilities.textDocument.completion.completionItem.snippetSupport = false
 -- lsps with default config
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {

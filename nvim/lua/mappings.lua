@@ -17,7 +17,8 @@ map("n", "L", "$")
 map("n", "J", "mzJ`z")
 
 
-map("n", '<CR>', 'm`o<Esc>``', {desc = "add blank line below"})
+map("n", '<CR>', 'o<Esc>', {desc = "add blank line below"})
+
 
 
 

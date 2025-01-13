@@ -1,3 +1,4 @@
+local cmp = require "cmp"
 return {
   {
     "stevearc/conform.nvim",
@@ -32,6 +33,7 @@ return {
         "gosum",
         "ninja",
         "rst",
+        "c",
       },
     },
   },
@@ -41,8 +43,27 @@ return {
       conf.filters.git_ignored = true
       conf.filters.dotfiles = true
       return conf
-    end
-  }
+    end,
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = {
+      preselect = cmp.PreselectMode.None,
+      sources = {
+        { name = "nvim_lsp" },
+        -- { name = "luasnip" },
+        { name = "buffer" },
+        { name = "nvim_lua" },
+        { name = "path" },
+      },
+      mapping = cmp.mapping.preset.insert({
+    ['<CR>'] = cmp.mapping.confirm({ select = false }),
+  }),
+      completion = {
+        completeopt = "menu,menuone,noinsert,noselect",
+      },
+    },
+  },
   -- {
   --   "nvim-telescope/telescope.nvim",
   --   opts = function(_, conf)
