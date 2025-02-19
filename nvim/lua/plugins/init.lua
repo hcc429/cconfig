@@ -41,7 +41,7 @@ return {
     "nvim-tree/nvim-tree.lua",
     opts = function(_, conf)
       conf.filters = {
-        custom: {".git", "node_modules", "__pycache__"}
+        custom =  {".git", "node_modules", "__pycache__"}
       }
       return conf
     end,
